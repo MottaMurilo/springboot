@@ -14,13 +14,13 @@ public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     private String name;
     private String email;
     private String password;
     private String phone;
 
-    public User(int id, String name, String password, String email, String phone){
+    public User(Long id, String name, String password, String email, String phone){
         super();
         this.email = email;
         this.id = id;
@@ -32,7 +32,7 @@ public class User implements Serializable {
     public String getEmail() {
         return email;
     }
-    public int getId() {
+    public Long getId() {
         return id;
     }
     public String getName() {
@@ -47,7 +47,7 @@ public class User implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
     public void setName(String name) {
